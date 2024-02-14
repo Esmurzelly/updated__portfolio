@@ -1,7 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import skillReducer from './features/skillSlice'
+import portfolioReducer from './features/portfolioSlice'
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    skills: skillReducer,
+    portfolio: portfolioReducer
+  },
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

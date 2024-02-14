@@ -15,6 +15,10 @@ import logo_vite from '../../assets/skills/vite.svg';
 import logo_mongodb from '../../assets/skills/mongodb.svg';
 import logo_nodejs from '../../assets/skills/nodejs.svg';
 import logo_docker from '../../assets/skills/docker.svg';
+import logo_nextjs from '../../assets/skills/nextjs.svg';
+import logo_english from '../../assets/skills/english.svg';
+import logo_german from '../../assets/skills/german.svg';
+import logo_korean from '../../assets/skills/korean.svg';
 
 // export interface CounterState {
 //   value: number
@@ -24,73 +28,111 @@ const initialState = {
   skills: [
     {
       id: 1,
-      name: 'logo_html',
+      name: 'HTML',
       logo: logo_html,
+      status: 'done'
     },
     {
       id: 2,
-      name: 'logo_css',
+      name: 'CSS',
       logo: logo_css,
+      status: 'done'
     },
     {
       id: 3,
-      name: 'logo_js',
+      name: 'JS',
       logo: logo_js,
+      status: 'done'
     },
     {
       id: 4,
-      name: 'logo_typescript',
+      name: 'TS',
       logo: logo_typescript,
+      status: 'done'
     },
     {
       id: 5,
-      name: 'logo_react',
+      name: 'ReactJS',
       logo: logo_react,
+      status: 'done'
     },
     {
       id: 6,
-      name: 'logo_redux',
+      name: 'Redux Toolkit',
       logo: logo_redux,
+      status: 'done'
     },
     {
       id: 7,
-      name: 'logo_vite',
+      name: 'Vite',
       logo: logo_vite,
+      status: 'done'
     },
     {
       id: 8,
-      name: 'logo_docker',
+      name: 'Docker',
       logo: logo_docker,
+      status: 'learning'
     },
     {
       id: 9,
-      name: 'logo_sass',
+      name: 'SASS',
       logo: logo_sass,
+      status: 'done'
     },
     {
       id: 10,
-      name: 'logo_tailwind',
+      name: 'Tailwind',
       logo: logo_tailwind,
+      status: 'done'
     },
     {
       id: 11,
-      name: 'logo_git',
+      name: 'GIT',
       logo: logo_git,
+      status: 'done'
     },
     {
       id: 12,
-      name: 'logo_figma',
+      name: 'Figma',
       logo: logo_figma,
+      status: 'done'
     },
     {
       id: 13,
-      name: 'logo_nodejs',
+      name: 'NodeJS',
       logo: logo_nodejs,
+      status: 'learning'
     },
     {
       id: 14,
-      name: 'logo_mongodb',
+      name: 'MongoDB',
       logo: logo_mongodb,
+      status: 'done'
+    },
+    {
+      id: 15,
+      name: 'English B2',
+      logo: logo_english,
+      status: 'other'
+    },
+    {
+      id: 16,
+      name: 'Deutsch A2',
+      logo: logo_german,
+      status: 'other'
+    },
+    {
+      id: 17,
+      name: '한국인 A1',
+      logo: logo_korean,
+      status: 'other'
+    },    
+    {
+      id: 18,
+      name: 'NextJS',
+      logo: logo_nextjs,
+      status: 'learning'
     },
   ],
 };

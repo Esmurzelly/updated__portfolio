@@ -33,7 +33,7 @@ const Introdution = (props: Props) => {
       <div className='relative bg-[#1D1D1D] flex flex-col justify-center items-center py-3'>
         <div className='absolute flex flex-col gap-4 text-center w-full px-4'>
           <p className='text-xl font-semibold font-montserrat'>IT BERRIES</p>
-          <p className='font-open_sans text-sm'>Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. </p>
+          <p className='font-open_sans text-sm tracking-wide'>Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. </p>
           <button className='relative font-montserrat text-base font-semibold uppercase mx-auto w-[200px]
             after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-white after:left-12 after:top-0
             before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-white before:right-12 before:top-0
