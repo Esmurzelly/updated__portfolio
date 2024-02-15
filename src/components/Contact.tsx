@@ -51,7 +51,7 @@ const Contact = (props: Props) => {
   // };
 
   return (
-    <div className="gray_gradient w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
+    <div id='contact' className="gray_gradient w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
       <div className="w-full flex flex-col items-center">
         <h1 className="w-[200px] uppercase font-bold text-lg  py-2 px-8 border-solid border-4 border-black">
           contact

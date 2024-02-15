@@ -18,9 +18,8 @@ const Projects = (props: Props) => {
     ? projects.filter(el => el.type === filterType)
     : projects;
 
-  console.log(projects);
   return (
-    <div className="w-full flex flex-col items-center justify-center py-8 text-center font-montserrat">
+    <div id='projects' className="w-full flex flex-col items-center justify-center py-8 text-center font-montserrat">
       <h1 className="w-[200px] font-montserrat uppercase font-bold text-lg py-2 mt-3 border-solid border-4 border-black">
         portfolio
       </h1>
@@ -75,7 +74,7 @@ const Projects = (props: Props) => {
               <div className="flex flex-row items-center justify-center gap-2 mt-6">
                 <a
                   href={el.live}
-                  className='relative text-base uppercase mx-auto w-[100px] 
+                  className='relative animate-bounce text-base uppercase mx-auto w-[100px] 
                   after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-white after:left-3 after:top-0
                   before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-white before:right-3 before:top-0'
                 >
@@ -83,7 +82,7 @@ const Projects = (props: Props) => {
                 </a>
                 <a
                   href={el.code}
-                  className='relative text-base uppercase mx-auto w-[100px] 
+                  className='relative animate-bounce text-base uppercase mx-auto w-[100px] 
                   after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-white after:left-3 after:top-0
                   before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-white before:right-3 before:top-0'
                 >
