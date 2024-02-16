@@ -9,35 +9,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  const sectionsRef = useRef([]);
-
-  useEffect(() => {
-    const options = {
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(entires => {
-      entires.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log(entry.target.getAttribute('id'));
-        }
-      });
-    }, options);
-
-    sectionsRef.current.forEach(section => {
-      observer.observe(section);
-    });
-  }, []);
-
-  const refCallback = useCallback((element: any) => {
-    if (element) {
-      sectionsRef.current.push(element);
-    }
-  }, []);
-
   return (
-    <div className="overflow-x-hidden">
-      <div className="min-h-svh">
+    <div className="overflow-x-hidden scroll-smooth">
+      <div className="min-h-svh w-full">
         <Header />
         <Introdution />
         <About />

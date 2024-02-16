@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+.polygonclass_mobile {
+  clip-path: polygon(0 34%, 100% 1%, 100% 100%, 0% 100%);
 }
 
-.polygonclass {
-  clip-path: polygon(0 34%, 100% 1%, 100% 100%, 0% 100%);
+.polygonclass_pc {
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
 
 .gray_gradient {
@@ -21,4 +21,8 @@ html {
 
 .hover_gradient {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+}
+
+.scroll-hidden {
+  overflow: hidden;
 }

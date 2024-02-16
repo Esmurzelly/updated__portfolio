@@ -17,20 +17,24 @@ const Footer = (props: Props) => {
   }
 
   return (
-    <div className='w-full px-4 py-7 font-montserrat bg-[#1A1A1A] flex flex-col items-center justify-center mx-auto text-center text-white'>
-      <div onClick={() => handleOnTopPage()} className='top cursor-pointer'>
-        <ChevronDoubleUpIcon className='w-5 mx-auto text-white' />
-        <p className='font-semibold text-lg uppercase mt-1 tracking-widest'>back to top</p>
-      </div>
-      <div className='mt-5'>
-        <div className='flex flex-row items-center justify-center gap-4'>
-          <a href="#"><img className='w-8' src={facebookIcon} alt="facebookIcon" /></a>
-          <a href="#"><img className='w-8' src={linkedinIcon} alt="linkedinIcon" /></a>
-          <a href="#"><img className='w-8' src={instagramIcon} alt="instagramIcon" /></a>
-          <a href="#"><img className='w-8' src={mailIcon} alt="mailIcon" /></a>
+    <div className='w-full px-4 py-7 font-montserrat bg-[#1A1A1A] text-center text-white'>
+      <div className='max-w-screen-2xl mx-auto px-5 flex flex-col items-center justify-center'>
+        <div onClick={() => handleOnTopPage()} className='top cursor-pointer'>
+          <ChevronDoubleUpIcon className='w-5 mx-auto text-white' />
+          <p className='font-semibold text-lg uppercase mt-1 tracking-widest'>back to top</p>
         </div>
-        <p className='font-medium mt-4 text-lg'>@2020 <span className='font-bold'>Adam Esmurziev</span> All Rights Reserved.</p>
+        <div className='mt-5'>
+          <div className='flex flex-row items-center justify-center gap-4'>
+            <a href="#"><img className='w-8' src={facebookIcon} alt="facebookIcon" /></a>
+            <a href="#"><img className='w-8' src={linkedinIcon} alt="linkedinIcon" /></a>
+            <a href="#"><img className='w-8' src={instagramIcon} alt="instagramIcon" /></a>
+            <a href="#"><img className='w-8' src={mailIcon} alt="mailIcon" /></a>
+          </div>
+          <p className='font-medium mt-6 text-lg'>@2020 <span className='font-bold'>Adam Esmurziev</span> All Rights Reserved.</p>
+        </div>
+
       </div>
+      
     </div>
   )
 }

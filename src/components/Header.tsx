@@ -11,35 +11,104 @@ const Header = (props: Props) => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   const handleChangeModal = () => setShowModal(!showModal);
+  const handleChangeOverflow = () =>
+    showModal
+      ? (document.body.style.overflowY = 'hidden')
+      : (document.body.style.overflowY = 'auto');
 
   const handleScroll = () =>
     window.scrollY === 0 ? setIsTopOfPage(true) : setIsTopOfPage(false);
 
   useEffect(() => {
+    handleChangeOverflow();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [showModal]);
 
   return (
     <section
       id="header"
-      className={`fixed block_link top-0 left-0 z-50 w-full  text-white`}
+      className={`fixed block_link top-0 left-0 z-50 w-full bg-[#0B0B0B] text-white`}
     >
-      <div
-        className={`${
-          isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'
-        } bg-[#0B0B0B] p-3 w-full flex flex-row justify-between items-center`}
-      >
-        <div className="logo">
-          <img src={LogoLight} className="w-7 cursor-pointer" alt="LogoLight" />
-          {/* <img src={LogoDark} className='hidden w-7' alt="LogoDark" /> */}
-        </div>
+      <div className="max-w-screen-2xl mx-auto px-5">
+        <div
+          className={`${
+            isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'
+          } py-3 w-full flex flex-row justify-between items-center`}
+        >
+          <div className="logo">
+            <img
+              src={LogoLight}
+              className="w-7 cursor-pointer"
+              alt="LogoLight"
+            />
+          </div>
 
-        {showModal ? (
-          <XMarkIcon className="w-7 cursor-pointer" onClick={handleChangeModal} />
-        ) : (
-          <Bars3Icon className="w-7 cursor-pointer" onClick={handleChangeModal} />
-        )}
+          <div className="hidden md:flex w-2/3 font-montserrat text-center">
+            <ul className="flex flex-row items-center gap-3 w-full">
+              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
+                <a
+                  className="w-full"
+                  onClick={() => setShowModal(false)}
+                  href="#"
+                >
+                  Main
+                </a>
+              </li>
+              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
+                <a
+                  className="w-full"
+                  onClick={() => setShowModal(false)}
+                  href="#about"
+                >
+                  About me
+                </a>
+              </li>
+              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
+                <a
+                  className="w-full"
+                  onClick={() => setShowModal(false)}
+                  href="#skills"
+                >
+                  Skills
+                </a>
+              </li>
+              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
+                <a
+                  className="w-full"
+                  onClick={() => setShowModal(false)}
+                  href="#projects"
+                >
+                  Projects
+                </a>
+              </li>
+              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
+                <a
+                  className="w-full"
+                  onClick={() => setShowModal(false)}
+                  href="#contact"
+                >
+                  Contact me
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex md:hidden">
+            {showModal ? (
+              <XMarkIcon
+                className="w-7 cursor-pointer"
+                onClick={handleChangeModal}
+              />
+            ) : (
+              <Bars3Icon
+                className="w-7 cursor-pointer"
+                onClick={handleChangeModal}
+              />
+            )}
+          </div>
+        </div>
       </div>
 
       <Modal showModal={showModal} setShowModal={setShowModal} />

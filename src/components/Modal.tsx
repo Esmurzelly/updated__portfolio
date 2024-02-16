@@ -9,23 +9,25 @@ type Props = {
   setShowModal: (value: boolean) => void;
 };
 
-const Modal = ({ showModal, setShowModal }: Props) => {
-  
+const Modal = ({ showModal, setShowModal }: Props) => {  
   return (
     <div className={`absolute font-montserrat text-center top-12 left-0 ${showModal ? 'translate-x-0' : 'translate-x-full'} transition-all w-full min-h-svh z-50 py-1 bg-modal-background bg-cover bg-top text-white`}>
       <div className="flex flex-col items-center">
         <ul className="flex flex-col items-center gap-3 w-full">
-          <li className='hover:bg-white cursor-pointer w-full hover:text-black py-2'>
-            <a onClick={() => setShowModal(false)} href="#about">About me</a>
+        <li className='flex hover:bg-white cursor-pointer w-full hover:text-black py-2'>
+            <a className='w-full' onClick={() => setShowModal(false)} href="#">Main</a>
           </li>
-          <li className='hover:bg-white cursor-pointer w-full hover:text-black py-2'>
-            <a onClick={() => setShowModal(false)} href="#skills">Skills</a>
+          <li className='flex hover:bg-white cursor-pointer w-full hover:text-black py-2'>
+            <a className='w-full' onClick={() => setShowModal(false)} href="#about">About me</a>
           </li>
-          <li className='hover:bg-white cursor-pointer w-full hover:text-black py-2'>
-            <a onClick={() => setShowModal(false)} href="#projects">Projects</a>
+          <li className='flex hover:bg-white cursor-pointer w-full hover:text-black py-2'>
+            <a className='w-full' onClick={() => setShowModal(false)} href="#skills">Skills</a>
           </li>
-          <li className='hover:bg-white cursor-pointer w-full hover:text-black py-2'>
-            <a onClick={() => setShowModal(false)} href="#contact">Contact me</a>
+          <li className='flex hover:bg-white cursor-pointer w-full hover:text-black py-2'>
+            <a className='w-full' onClick={() => setShowModal(false)} href="#projects">Projects</a>
+          </li>
+          <li className='flex hover:bg-white cursor-pointer w-full hover:text-black py-2'>
+            <a className='w-full' onClick={() => setShowModal(false)} href="#contact">Contact me</a>
           </li>
         </ul>
 
