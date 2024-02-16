@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .polygonclass {
   clip-path: polygon(0 34%, 100% 1%, 100% 100%, 0% 100%);
 }

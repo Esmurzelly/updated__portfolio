@@ -2,13 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
-type Props = {};
+type Props = {
+};
 
 const Skills = (props: Props) => {
   const { skills } = useSelector((state: RootState) => state.skills);
   
   return (
-    <div id='skills' className="gray_gradient w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
+    <section id='skills' className="gray_gradient block_link w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
       <h1 className="w-[200px] font-montserrat uppercase font-bold text-lg py-2 px-8 border-solid border-4 border-black">
         skills
       </h1>
@@ -54,7 +55,7 @@ const Skills = (props: Props) => {
             ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

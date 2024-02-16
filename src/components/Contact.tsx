@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import separatedLine from '../assets/about/separatorBlack.svg';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-type Props = {};
+type Props = {
+  
+}
 
 type Inputs = {
   name: string;
@@ -51,7 +53,7 @@ const Contact = (props: Props) => {
   // };
 
   return (
-    <div id='contact' className="gray_gradient w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
+    <div id='contact' className="gray_gradient block_link w-full flex flex-col items-center justify-center py-8 px-10 text-center font-montserrat">
       <div className="w-full flex flex-col items-center">
         <h1 className="w-[200px] uppercase font-bold text-lg  py-2 px-8 border-solid border-4 border-black">
           contact

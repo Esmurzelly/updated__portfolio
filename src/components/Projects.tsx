@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
-type Props = {};
+type Props = {
+};
 
 type FilterTypes = 'web_app' | 'web_site' | 'utility';
 
@@ -19,7 +20,7 @@ const Projects = (props: Props) => {
     : projects;
 
   return (
-    <div id='projects' className="w-full flex flex-col items-center justify-center py-8 text-center font-montserrat">
+    <section id='projects' className="w-full block_link flex flex-col items-center justify-center py-8 text-center font-montserrat">
       <h1 className="w-[200px] font-montserrat uppercase font-bold text-lg py-2 mt-3 border-solid border-4 border-black">
         portfolio
       </h1>
@@ -94,7 +95,7 @@ const Projects = (props: Props) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

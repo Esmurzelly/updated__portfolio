@@ -4,11 +4,13 @@ import designIcon from '../assets/about/design.png';
 import developmnentIcon from '../assets/about/develoopmnent.png';
 import maintenanceIcon from '../assets/about/maintenance.png';
 
-type Props = {};
+type Props = {
+  
+};
 
 const About = (props: Props) => {
   return (
-    <div id='about' className="gray_gradient w-full flex flex-col items-center justify-center py-8 px-10 text-center">
+    <section  id='about' className="gray_gradient block_link w-full flex flex-col items-center justify-center py-8 px-10 text-center">
       <div className="flex flex-col items-center gap-7">
         <h1 className="w-[200px] font-montserrat uppercase font-bold text-lg py-2 px-8 border-solid border-4 border-black">
           About me
@@ -82,7 +84,7 @@ const About = (props: Props) => {
         </div>
       </div>
       <img className="my-14" src={separatedLine} alt="separatedLine" />
-    </div>
+    </section>
   );
 };
 

@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {},
+      backgroundImage: {
+        'modal-background': "url('./src/assets/common/modal_background.jpg')",
+      },
       fontFamily: {
         raleway: ['"Raleway"', "sans-serif"],
         montserrat: ['"Montserrat"', "sans-serif"],
