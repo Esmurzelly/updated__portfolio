@@ -29,13 +29,13 @@ const Header = (props: Props) => {
   return (
     <section
       id="header"
-      className={`fixed block_link top-0 left-0 z-50 w-full bg-[#0B0B0B] text-white`}
+      className={`fixed block_link top-0 left-0 z-50 w-full bg-[#0B0B0B] text-white ${
+        isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'
+      }`}
     >
       <div className="max-w-screen-2xl mx-auto px-5">
         <div
-          className={`${
-            isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'
-          } py-3 w-full flex flex-row justify-between items-center`}
+          className={`py-3 w-full flex flex-row justify-between items-center`}
         >
           <div className="logo">
             <img
@@ -45,55 +45,25 @@ const Header = (props: Props) => {
             />
           </div>
 
-          <div className="hidden md:flex w-2/3 font-montserrat text-center">
-            <ul className="flex flex-row items-center gap-3 w-full">
-              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
-                <a
-                  className="w-full"
-                  onClick={() => setShowModal(false)}
-                  href="#"
+          <nav className="hidden md:flex w-2/3 font-montserrat text-center">
+            <ul className='flex flex-row items-center gap-3 w-full'>
+              {[
+                ['Home', '#'],
+                ['About', '#about'],
+                ['Skills', '#skills'],
+                ['Projects', '#projects'],
+                ['Contact', '#contact'],
+              ].map(([title, url]) => (
+                <li
+                  key={title}
+                  className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2"
                 >
-                  Main
-                </a>
-              </li>
-              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
-                <a
-                  className="w-full"
-                  onClick={() => setShowModal(false)}
-                  href="#about"
-                >
-                  About me
-                </a>
-              </li>
-              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
-                <a
-                  className="w-full"
-                  onClick={() => setShowModal(false)}
-                  href="#skills"
-                >
-                  Skills
-                </a>
-              </li>
-              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
-                <a
-                  className="w-full"
-                  onClick={() => setShowModal(false)}
-                  href="#projects"
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="flex hover:bg-white rounded-lg cursor-pointer w-full hover:text-black py-2">
-                <a
-                  className="w-full"
-                  onClick={() => setShowModal(false)}
-                  href="#contact"
-                >
-                  Contact me
-                </a>
-              </li>
+                  <a href={url} className='w-full'>{title}</a>
+                </li>
+              ))}
+
             </ul>
-          </div>
+          </nav>
 
           <div className="flex md:hidden">
             {showModal ? (

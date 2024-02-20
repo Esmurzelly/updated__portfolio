@@ -1,4 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Header from './components/Header';
 import Introdution from './components/Introdution';
@@ -19,8 +21,9 @@ function App() {
         <Projects />
         <Contact />
       </div>
-
       <Footer />
+
+      <ToastContainer />
     </div>
   );
 }

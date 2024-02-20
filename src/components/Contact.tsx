@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import separatedLine from '../assets/about/separatorBlack.svg';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
-type Props = {
-  
-}
+type Props = {}
 
 type Inputs = {
   name: string;
@@ -27,6 +27,8 @@ const Contact = (props: Props) => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
+  const [status, setStatus] = useState({});
+  // const notifySuccess = () => ;
 
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
@@ -37,20 +39,31 @@ const Contact = (props: Props) => {
     });
   };
 
-  // const handleTypeSubmit = async () => {
-  //   const response = await axios.post('/auth/contact', formDetails, {
-  //     headers: {
-  //       'Content-Type': 'application/json;charset=utf-8',
-  //     },
-  //   });
+  const hanldeSubmitForm = async () => {
+    // e.preventDefault();
 
-  //   if (response.status === 200) {
-  //     alert('Message Sent Successfully!');
-  //     setFormDetails(formInitialDetails);
-  //   } else {
-  //     alert(`Error while sending message - ${response.statusText}`);
-  //   }
-  // };
+    // https://cold-outrageous-tray.glitch.me/contact
+    // 
+
+    try {
+      let response = await fetch(import.meta.env.VITE_APP_CONTACT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'Application/json;charset=utf-8',
+        },
+        body: JSON.stringify(formDetails),
+      });
+  
+      let result = await response.json();
+      setFormDetails(formInitialDetails);
+  
+      if(result.code === 200) toast("Message sent successfully :)");
+    } catch (error) {
+      toast("Message sent wrong :(")
+    }
+
+  };
+
 
   return (
     <div id='contact' className="gray_gradient block_link w-full text-center font-montserrat">
@@ -69,7 +82,7 @@ const Contact = (props: Props) => {
         </div>
 
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(hanldeSubmitForm)}
           className="flex flex-col items-end w-full h-full mt-6"
         >
           <div className="flex flex-col gap-3 w-full">
@@ -141,13 +154,8 @@ const Contact = (props: Props) => {
                 </p>
               )}
             </div>
-            <button
-              type="submit"
-              className='mt-5 relative font-montserrat text-lg font-semibold uppercase mx-auto
-              after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-black after:-left-4 after:top-0
-              before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-black before:-right-4 before:top-0'
-            >
-              <span>Submit</span>
+            <button type="submit" className='btn-primary mt-5 after:bg-black after:-left-4 before:bg-black before:-right-4'>
+              Submit
             </button>
           </div>
         </form>

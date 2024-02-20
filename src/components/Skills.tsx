@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+import ItemSkill from './ItemSkill';
 
 type Props = {
 };
@@ -21,10 +22,7 @@ const Skills = (props: Props) => {
           {skills
             .filter(el => el.status === 'done')
             .map(el => (
-              <li key={el.id} className="w-20 flex flex-col justify-between items-center">
-                <img className="h-16 w-16" src={el.logo} alt={el.name} />
-                <p className="mt-1 text-sm">{el.name}</p>
-              </li>
+              <ItemSkill key={el.id} id={el.id} name={el.name} logo={el.logo} />
             ))}
         </ul>
       </div>
@@ -35,10 +33,7 @@ const Skills = (props: Props) => {
           {skills
             .filter(el => el.status === 'learning')
             .map(el => (
-              <li key={el.id} className="w-20 flex flex-col justify-between items-center">
-                <img className="h-16 w-16" src={el.logo} alt={el.name} />
-                <p className="mt-1 text-sm">{el.name}</p>
-              </li>
+              <ItemSkill key={el.id} id={el.id} name={el.name} logo={el.logo} />
             ))}
         </ul>
       </div>
@@ -49,10 +44,7 @@ const Skills = (props: Props) => {
           {skills
             .filter(el => el.status === 'other')
             .map(el => (
-              <li key={el.id} className="w-20 flex flex-col justify-between items-center">
-                <img className="w-16 h-16" src={el.logo} alt={el.name} />
-                <p className="mt-1 text-sm">{el.name}</p>
-              </li>
+              <ItemSkill key={el.id} id={el.id} name={el.name} logo={el.logo} />
             ))}
         </ul>
       </div>

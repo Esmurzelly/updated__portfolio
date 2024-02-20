@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ExampleMan from '../assets/header/example_man.png';
 import ExampleMan1 from '../assets/header/example_first.png';
 import ExampleMan2 from '../assets/header/example_sec.png';
+import ExampleMan25 from '../assets/common/ssss.png';
 import ExampleMan3 from '../assets/header/example_third.png';
 import github from '../assets/common/social_links/github.svg';
 import inkedin from '../assets/common/social_links/inkedin.svg';
@@ -57,7 +58,7 @@ const Introdution = (props: Props) => {
 
         {/* <img className='' src={ExampleMan} alt="man" />  delete absolute and realative */}
         <div className="w-full flex justify-end">
-          <img className="max-w-full" src={ExampleMan2} alt="man" />
+          <img className="max-w-full" src={ExampleMan25} alt="man" />
         </div>
       </div>
       
@@ -76,12 +77,8 @@ const Introdution = (props: Props) => {
               Pellentesque laoreet varius turpis vel pharetra. Ut ante justo,
               consequat vitae elementum tempor, accumsan nec eros.{' '}
             </p>
-            <button
-              className='relative font-montserrat text-base font-semibold uppercase mx-auto w-[200px]
-            after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-white after:left-12 after:top-0
-            before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-white before:right-12 before:top-0
-            '
-            >
+
+            <button className='btn-primary w-[200px] after:bg-white after:left-12 before:bg-white before:right-12'>
               More
             </button>
           </div>

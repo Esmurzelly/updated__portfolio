@@ -25,11 +25,7 @@ const About = (props: Props) => {
             and programming websites, my passion is all kinds of motorsport -
             from rallies to the very king of motorsport - formula 1.
           </p>
-          <button
-            className='relative font-montserrat text-lg font-semibold uppercase mx-auto w-[270px]
-            after:content-[""] after:absolute after:w-[2px] after:h-6 after:bg-black after:left-12 after:top-0
-            before:content-[""] before:absolute before:w-[2px] before:h-6 before:bg-black before:right-12 before:top-0'
-          >
+          <button className='btn-primary w-[270px] after:bg-black after:left-12 before:bg-black before:right-12'>
             explore
           </button>
           <img className="my-8" src={separatedLine} alt="separatedLine" />
