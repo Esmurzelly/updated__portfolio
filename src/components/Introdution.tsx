@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ExampleMan from '../assets/header/example_man.png';
 // import ExampleMan1 from '../assets/header/example_first.png';
 // import ExampleMan2 from '../assets/header/example_sec.png';
@@ -9,9 +9,7 @@ import inkedin from '../assets/common/social_links/inkedin.svg';
 import telegram from '../assets/common/social_links/telegram.svg';
 import itb from '../assets/common/ITB.svg';
 
-type Props = {};
-
-const Introdution = (props: Props) => {
+const Introdution = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
   useEffect(() => {
