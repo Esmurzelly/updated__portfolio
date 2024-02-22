@@ -23,10 +23,10 @@ const Footer = () => {
         </div>
         <div className='mt-5'>
           <div className='flex flex-row items-center justify-center gap-4'>
-            <a href="#"><img className='w-8' src={facebookIcon} alt="facebookIcon" /></a>
-            <a href="#"><img className='w-8' src={linkedinIcon} alt="linkedinIcon" /></a>
-            <a href="#"><img className='w-8' src={instagramIcon} alt="instagramIcon" /></a>
-            <a href="#"><img className='w-8' src={mailIcon} alt="mailIcon" /></a>
+            <a target='_blank' href="https://www.facebook.com/adam.megas"><img className='w-8' src={facebookIcon} alt="facebookIcon" /></a>
+            <a target='_blank' href="https://ru.linkedin.com/in/adam-esmurzelly-469355280"><img className='w-8' src={linkedinIcon} alt="linkedinIcon" /></a>
+            <a target='_blank' href="https://www.instagram.com/esmurzelly"><img className='w-8' src={instagramIcon} alt="instagramIcon" /></a>
+            <a target='_blank' href="mailto:elephants54706@gmail.com"><img className='w-8' src={mailIcon} alt="mailIcon" /></a>
           </div>
           <p className='font-medium mt-6 text-lg'>@2020 <span className='font-bold'>Adam Esmurziev</span> All Rights Reserved.</p>
         </div>

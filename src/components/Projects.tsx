@@ -24,7 +24,7 @@ const Projects = () => {
       className="w-full block_link text-center flex flex-col items-center justify-center md:pt-20 py-8"
     >
       <h1 className="w-[200px] font-montserrat uppercase font-bold text-lg py-2 mt-3 border-solid border-4 border-black">
-        portfolio
+        projects
       </h1>
 
       <div className="w-full mt-8 bg-[#1A1A1A] py-6 px-4 text-white grid grid-cols-2 grid-rows-2 gap-y-3">

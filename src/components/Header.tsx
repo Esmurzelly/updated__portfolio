@@ -35,13 +35,13 @@ const Header = () => {
         <div
           className={`py-3 w-full flex flex-row justify-between items-center`}
         >
-          <div className="logo">
+          <a href='#' className="logo">
             <img
               src={LogoLight}
               className="w-7 cursor-pointer"
               alt="LogoLight"
             />
-          </div>
+          </a>
 
           <nav className="hidden md:flex w-2/3 font-montserrat text-center">
             <ul className='flex flex-row items-center gap-3 w-full'>

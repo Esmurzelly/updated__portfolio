@@ -36,10 +36,8 @@ const Contact = () => {
   };
 
   const hanldeSubmitForm = async () => {
-    // e.preventDefault();
-
     try {
-      let response = await fetch('https://citrine-calm-brachiosaurus.glitch.me', {
+      let response = await fetch(import.meta.env.VITE_APP_CONTACT, {
         method: 'POST',
         headers: {
           'Content-Type': 'Application/json;charset=utf-8',

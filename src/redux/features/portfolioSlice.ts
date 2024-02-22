@@ -181,7 +181,7 @@ const initialState = {
       description:
         'My personal portfolio using ReactJS, NodeJS and Redux Toolkit',
       mainUrl: PortfolioImg,
-      live: 'https://react-posgresql-2flv11w0o-esmurzelly.vercel.app/',
+      live: 'https://portfolio-esmurzelly.vercel.app/',
       code: 'https://github.com/Esmurzelly/react-posgresql',
       stack: ['ReactJS', 'NodeJS', 'Express', 'Bootstrap', 'Redux Toolkit'],
     },

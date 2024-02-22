@@ -42,13 +42,13 @@ const Introdution = () => {
           </div>
 
           <div className="flex flex-col gap-3 md:gap-7 md:flex-row md:w-2/3">
-            <a href="https://github.com/Esmurzelly">
+            <a target='_blank' href="https://github.com/Esmurzelly">
               <img src={github} className="w-8" />
             </a>
-            <a href="https://ru.linkedin.com/in/adam-esmurzelly-469355280">
+            <a target='_blank' href="https://ru.linkedin.com/in/adam-esmurzelly-469355280">
               <img src={inkedin} className="w-8" />
             </a>
-            <a href="https://t.me/Esmurzelly">
+            <a target='_blank' href="https://t.me/Esmurzelly">
               <img src={telegram} className="w-8" />
             </a>
           </div>
@@ -64,23 +64,25 @@ const Introdution = () => {
       <div className="bg-[#1D1D1D]">
         <div className="max-w-screen-2xl mx-auto px-5 flex flex-col justify-center items-center py-3">
           <div className="absolute flex flex-col gap-4 text-center max-w-screen-2xl px-4">
-            <p className="text-xl font-semibold font-montserrat">IT BERRIES</p>
+            <p className="text-xl font-semibold font-montserrat uppercase">My IT Backgroud</p>
             <p className="font-open_sans text-sm tracking-wider">
-              Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-              varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-              quis libero viverra facilisis ut ac est. Morbi commodo, eros in
-              dignissim tempus, lacus odio rutrum augue, in semper sem magna
-              quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit
-              amet elit. Nunc egestas nisi eget enim gravida facilisis.
-              Pellentesque laoreet varius turpis vel pharetra. Ut ante justo,
-              consequat vitae elementum tempor, accumsan nec eros.{' '}
+              I began to interest in programming when I was in the 10th grade. At that time, I was deciding to try absolutely everything 
+              in IT from C++ applications to GameDev. After all, I choosed Frontend development. The main reason was visualization of
+              what you write in real time. Several years have passed since I wrote my first HTML page.
+              My choose made me work hard and a lot, but I never regretted it. <br />
+              I'm a selflearner that's why my way biult by mistakes and lots errors, but only that made me stronger day by day.
+              It helped me to have an internship and get a job in IT company.
+              Nowadays, I’m developing applications, I even couldn&apos;t 
+              imagine 4 years ago. 
             </p>
 
-            <button className='btn-primary w-[200px] after:bg-white after:left-12 before:bg-white before:right-12'>
-              More
-            </button>
+            <a target='_blank' className='mt-5' href="https://github.com/Esmurzelly">
+              <button className='btn-primary w-[200px] after:bg-white after:left-12 before:bg-white before:right-12'>
+                More
+              </button>
+            </a>
           </div>
-          <img className="" src={itb} alt="itb" />
+          <img src={itb} alt="itb" />
         </div>
       </div>
     </div>

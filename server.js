@@ -54,7 +54,7 @@ router.post('/contact', (req, res) => {
             res.json(error)
             console.log('error: ', res.json(error));
         } else {
-            res.json({ code: 200, status: 'Message sent' });
+            res.json({ code: 200, status: 'Message sent', body: {} });
             console.log('message sent mtfc!')
         }
     })
