@@ -1,12 +1,10 @@
-import React from 'react';
 import separatedLine from '../assets/about/separatorBlack.svg';
 import designIcon from '../assets/about/design.png';
 import developmnentIcon from '../assets/about/develoopmnent.png';
 import maintenanceIcon from '../assets/about/maintenance.png';
 
-type Props = {};
 
-const About = (props: Props) => {
+const About = () => {
   return (
     <section id="about" className="gray_gradient block_link w-full">
       <div className="max-w-screen-2xl mx-auto px-5 flex flex-col items-center justify-center pt-16 md:pt-20 py-8 text-center">

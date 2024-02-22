@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import LogoLight from '../assets/header/light_logo.svg';
-import LogoDark from '../assets/header/dark_logo.svg';
+// import LogoDark from '../assets/header/dark_logo.svg';
 import Modal from './Modal';
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 

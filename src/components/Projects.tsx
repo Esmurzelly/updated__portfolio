@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import ItemProject from './ItemProject';
 
-type Props = {};
 
 type FilterTypes = 'web_app' | 'web_site' | 'utility';
 
-const Projects = (props: Props) => {
+const Projects = () => {
   const { projects } = useSelector((state: RootState) => state.portfolio);
   const [filterType, setFilterType] = useState<FilterTypes>();
 

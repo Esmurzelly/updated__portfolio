@@ -1,13 +1,11 @@
-import React from 'react'
 import { ChevronDoubleUpIcon } from '@heroicons/react/24/solid';
 import facebookIcon from '../assets/common/social_links/facebook.svg';
 import linkedinIcon from '../assets/common/social_links/inkedin__footer.svg';
 import instagramIcon from '../assets/common/social_links/instagram.svg';
 import mailIcon from '../assets/common/social_links/mail.svg';
 
-type Props = {}
 
-const Footer = (props: Props) => {
+const Footer = () => {
   const handleOnTopPage = () => {
     window.scrollTo({
       top: 0,

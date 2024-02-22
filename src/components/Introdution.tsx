@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ExampleMan from '../assets/header/example_man.png';
-import ExampleMan1 from '../assets/header/example_first.png';
-import ExampleMan2 from '../assets/header/example_sec.png';
-import ExampleMan25 from '../assets/common/ssss.png';
-import ExampleMan3 from '../assets/header/example_third.png';
+// import ExampleMan1 from '../assets/header/example_first.png';
+// import ExampleMan2 from '../assets/header/example_sec.png';
+// import ExampleMan25 from '../assets/common/ssss.png';
+// import ExampleMan3 from '../assets/header/example_third.png';
 import github from '../assets/common/social_links/github.svg';
 import inkedin from '../assets/common/social_links/inkedin.svg';
 import telegram from '../assets/common/social_links/telegram.svg';
@@ -58,7 +58,7 @@ const Introdution = (props: Props) => {
 
         {/* <img className='' src={ExampleMan} alt="man" />  delete absolute and realative */}
         <div className="w-full flex justify-end">
-          <img className="max-w-full" src={ExampleMan25} alt="man" />
+          <img className="max-w-full" src={ExampleMan} alt="man" />
         </div>
       </div>
       

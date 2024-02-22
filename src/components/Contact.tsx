@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import separatedLine from '../assets/about/separatorBlack.svg';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import axios from 'axios';
+import { useForm } from 'react-hook-form';
+// import axios from 'axios';
 import { toast } from 'react-toastify';
 
-type Props = {}
 
 type Inputs = {
   name: string;
@@ -12,11 +11,10 @@ type Inputs = {
   message: string;
 };
 
-const Contact = (props: Props) => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
 
@@ -27,10 +25,8 @@ const Contact = (props: Props) => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [status, setStatus] = useState({});
-  // const notifySuccess = () => ;
 
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+  // const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
   const onFormUpdate = (category: any, value: any) => {
     setFormDetails({
@@ -42,11 +38,8 @@ const Contact = (props: Props) => {
   const hanldeSubmitForm = async () => {
     // e.preventDefault();
 
-    // https://cold-outrageous-tray.glitch.me/contact
-    // 
-
     try {
-      let response = await fetch(import.meta.env.VITE_APP_CONTACT, {
+      let response = await fetch('https://citrine-calm-brachiosaurus.glitch.me', {
         method: 'POST',
         headers: {
           'Content-Type': 'Application/json;charset=utf-8',

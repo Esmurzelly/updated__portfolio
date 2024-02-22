@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
+// import type { PayloadAction } from '@reduxjs/toolkit';
 
 import logo_html from '../../assets/skills/html.svg';
 import logo_css from '../../assets/skills/css.svg';

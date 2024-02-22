@@ -1,12 +1,8 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import ItemSkill from './ItemSkill';
 
-type Props = {
-};
-
-const Skills = (props: Props) => {
+const Skills = () => {
   const { skills } = useSelector((state: RootState) => state.skills);
   
   return (

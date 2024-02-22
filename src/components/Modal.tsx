@@ -1,4 +1,3 @@
-import React from 'react';
 import separatedLine from '../assets/about/separatorWhite.svg';
 import mailIcon from '../assets/common/social_links/forModal/mailIcon.svg';
 import githubIcon from '../assets/common/social_links/forModal/githubIcon.svg';
