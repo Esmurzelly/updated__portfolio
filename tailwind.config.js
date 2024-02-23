@@ -6,7 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        dark_layout: "#1D1D1D",
+        darker_layout: "#0B0B0B",
+        darkest_layout: "#1A1A1A",
+        gray_layout: "#D7D7D7",
+        placeholder_layout: "#8B8B8B",
+      },
       backgroundImage: {
         'modal-background': "url('./src/assets/common/modal_background.jpg')",
       },
