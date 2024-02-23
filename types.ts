@@ -6,7 +6,7 @@ export interface IProject {
     mainUrl: string,
     live: string,
     code: string,
-    stack: Array<string>
+    stack?: Array<string>
 }
 
 export interface ProjectsState {
@@ -17,7 +17,7 @@ export interface ISkill {
     id: number,
     name: string,
     logo: string,
-    status: string
+    status?: string
 }
 
 export interface SkillsState {
