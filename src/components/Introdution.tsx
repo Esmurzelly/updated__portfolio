@@ -77,7 +77,7 @@ const Introdution = () => {
             </p>
 
             <a target='_blank' className='mt-5' href="https://github.com/Esmurzelly">
-              <button className='btn-primary w-[200px] after:bg-white after:left-12 before:bg-white before:right-12'>
+              <button className='btn-primary w-[270px] after:bg-white after:left-12 before:bg-white before:right-12'>
                 More
               </button>
             </a>

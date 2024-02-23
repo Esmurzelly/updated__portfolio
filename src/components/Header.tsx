@@ -1,40 +1,47 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import LogoLight from '../assets/header/light_logo.svg';
-// import LogoDark from '../assets/header/dark_logo.svg';
 import Modal from './Modal';
 
 const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const headerRef = useRef<HTMLDivElement>(null);
 
-  const handleChangeModal = () => setShowModal(!showModal);
-  const handleChangeOverflow = () =>
-    showModal
-      ? (document.body.style.overflowY = 'hidden')
-      : (document.body.style.overflowY = 'auto');
-
-  const handleScroll = () =>
-    window.scrollY === 0 ? setIsTopOfPage(true) : setIsTopOfPage(false);
+  const toggleModal = () => setShowModal(!showModal);
 
   useEffect(() => {
-    handleChangeOverflow();
+    document.body.classList.toggle('overflow-hidden', showModal);
+    document.body.classList.toggle('overflow-auto', !showModal);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [showModal]);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsTopOfPage(!entry.isIntersecting)
+      },
+      { threshold: [0] }
+    );
+
+    if(headerRef.current) {
+      observer.observe(headerRef.current);
+    };
+
+    return () => {
+      if(headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, [showModal, headerRef]);
 
   return (
     <section
       id="header"
+      ref={headerRef}
       className={`fixed block_link top-0 left-0 z-50 w-full bg-[#0B0B0B] text-white ${
-        isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'
-      }`}
+        isTopOfPage || showModal ? 'opacity-100' : 'opacity-95'}`}
     >
       <div className="max-w-screen-2xl mx-auto px-5">
-        <div
-          className={`py-3 w-full flex flex-row justify-between items-center`}
-        >
+        <div className='py-3 w-full flex flex-row justify-between items-center'>
           <a href='#' className="logo">
             <img
               src={LogoLight}
@@ -67,12 +74,12 @@ const Header = () => {
             {showModal ? (
               <XMarkIcon
                 className="w-7 cursor-pointer"
-                onClick={handleChangeModal}
+                onClick={toggleModal}
               />
             ) : (
               <Bars3Icon
                 className="w-7 cursor-pointer"
-                onClick={handleChangeModal}
+                onClick={toggleModal}
               />
             )}
           </div>

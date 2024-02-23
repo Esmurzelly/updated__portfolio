@@ -1,3 +1,4 @@
+import { ProjectsState } from '../../../types';
 import { createSlice } from '@reduxjs/toolkit';
 
 import DictionaryAppImg from '../../assets/projects/DictionaryApp/main.png';
@@ -23,7 +24,8 @@ import FitnessImg from '../../assets/projects/Fitness/main.png';
 import CoffeeHouseImg from '../../assets/projects/CoffeeHouse/coffeehouse.png';
 import StpImg from '../../assets/projects/Stp/stpImg.png';
 
-const initialState = {
+
+const initialState: ProjectsState = {
   projects: [
     {
       id: 1,

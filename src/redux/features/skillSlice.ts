@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import type { PayloadAction } from '@reduxjs/toolkit';
 
 import logo_html from '../../assets/skills/html.svg';
 import logo_css from '../../assets/skills/css.svg';
@@ -19,12 +18,9 @@ import logo_nextjs from '../../assets/skills/nextjs.svg';
 import logo_english from '../../assets/skills/english.svg';
 import logo_german from '../../assets/skills/german.svg';
 import logo_korean from '../../assets/skills/korean.svg';
+import { SkillsState } from '../../../types';
 
-// export interface CounterState {
-//   value: number
-// }
-
-const initialState = {
+const initialState: SkillsState = {
   skills: [
     {
       id: 1,

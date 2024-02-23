@@ -52,7 +52,6 @@ const Contact = () => {
     } catch (error) {
       toast("Message sent wrong :(")
     }
-
   };
 
 

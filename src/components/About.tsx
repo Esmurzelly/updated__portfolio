@@ -21,7 +21,7 @@ const About = () => {
             Apart from programming websites and apps, my passion is learning languages, hiking and 
             reading science fiction books.
           </p>
-          <a href="https://github.com/Esmurzelly">
+          <a target='_blank' href="https://github.com/Esmurzelly">
             <button className='btn-primary w-[270px] after:bg-black after:left-12 before:bg-black before:right-12'>
               explore
             </button>
