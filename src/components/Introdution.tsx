@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ExampleMan from '../assets/header/example_man.png';
+import ExampleManBert from '../assets/header/example_manBert.png';
 import github from '../assets/common/social_links/github.svg';
 import inkedin from '../assets/common/social_links/inkedin.svg';
 import telegram from '../assets/common/social_links/telegram.svg';
@@ -48,7 +48,7 @@ const Introdution = () => {
         </div>
 
         <div className="w-full flex justify-end">
-          <img className="max-w-full" src={ExampleMan} alt="man" />
+          <img className="max-w-[360px] h-auto xl:w-2/4" src={ExampleManBert} alt="man" />
         </div>
       </div>
 

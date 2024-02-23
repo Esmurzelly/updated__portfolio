@@ -9,7 +9,6 @@ export interface IProject {
     stack: Array<string>
 }
 
-
 export interface ProjectsState {
     projects: IProject[];
 }
@@ -20,6 +19,7 @@ export interface ISkill {
     logo: string,
     status: string
 }
+
 export interface SkillsState {
     skills: ISkill[];
 }
